@@ -1,0 +1,585 @@
+<!doctype html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="welcome.css">
+</head>
+
+<body>
+    <div class="main-body-wrapper">
+        <header style="min-height: '65px'; display: block;">
+            <nav id="navbar" class="navbar">
+                <div class="select-overlay"></div>
+
+                <div class="primary-header">
+                    <div class="header-inner">
+                        <div class="header-col header-col-1">
+                            <div class="brand">
+                               <img src="https://is3-ssl.mzstatic.com/image/thumb/Purple113/v4/10/12/6a/10126a12-21fe-7f37-9a03-e53a505ec789/source/60x60bb.jpg">
+                            </div>
+                        </div>
+                        <div class="header-col header-cal-2">
+                            <div class="search-section">
+                                <span class="__icon search-icon">
+                                    <img src="https://cdns.iconmonstr.com/wp-content/assets/preview/2018/240/iconmonstr-search-thin.png">
+                                    <!-- <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 15"
+                                        enable-background="new 0 0 100 100" xml:space="preserve">
+                                        <use xlink:href="https://in.bookmyshow.com/icons/common-icons.svg"></use>
+                                    </svg> -->
+                                </span>
+                                <input type="text" name="inputSearchBox" class="search-box typeahead"
+                                    placeholder="Search for Movies, Events, Plays, Sports and Activities"
+                                    id="input-search-box" onfocus="BMS.Misc.fnTriggerQuickbook();"
+                                    autocomplete="search-box">
+                            </div>
+                        </div>
+                        <div class="header-col header-cal-3">
+                            <div class="header-login-profile">
+                                <div class="inner-nav">
+                                    <ul>
+                                        <li class="secondary-menu location-container">
+                                            <a data-nav-menu="Region" data-group="top-nav" class="location nav-link"
+                                                id="dTopRgnDD" href="javascript:;"
+                                                onclick="BMS.Header.fnHeaderDD(this, 'toggle');$('.__dd-sec-bottom .others-cities-list').hide();$('.__dd-sec-bottom .__view-all-cities').text('View All Cities');">
+                                                <span id="spnSelectedRegion" class="__region">Bengaluru</span>
+                                            </a>
+                                            <!-- Location search dropdown starts here -->
+                                            <div class="location-search-container nav-tip" data-id="dTopRgnDD"
+                                                data-role="dHeaderDD">
+                                                <div class="__dd-trianglel"></div>
+                                                <div class="__dd-sec-top struktur">
+                                                    <span class="__icon search-icon">
+                                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                            viewBox="0 0 100 100" enable-background="new 0 0 100 100"
+                                                            xml:space="preserve">
+                                                            <use xlink:href="/icons/common-icons.svg#icon-search_icon">
+                                                            </use>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="twitter-typeahead"
+                                                        style="position: relative; display: inline-block;"><input
+                                                            class="form-input __input _default tt-hint" type="text"
+                                                            readonly="" autocomplete="off" spellcheck="false"
+                                                            tabindex="-1" dir="ltr"
+                                                            style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; opacity: 1; background-attachment: scroll; background-clip: border-box; background-color: rgb(255, 255, 255); background-image: none; background-origin: padding-box; background-size: auto; background-position: 0% 0%; background-repeat: repeat repeat;"><input
+                                                            class="form-input __input _default tt-input"
+                                                            id="inp_RegionSearch_top" type="text"
+                                                            placeholder="Search for your city" autocomplete="off"
+                                                            spellcheck="false" dir="auto"
+                                                            style="position: relative; vertical-align: top; background-color: transparent;">
+                                                        <pre aria-hidden="true"
+                                                            style="position: absolute; visibility: hidden; white-space: pre; font-family: Roboto, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-east-asian: normal; font-variant-position: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: optimizeLegibility; text-transform: none;"></pre>
+                                                        <div class="tt-menu"
+                                                            style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;">
+                                                            <div class="tt-dataset tt-dataset-result"></div>
+                                                        </div></span>
+                                                    <div data-id="inp_RegionSearch_top"
+                                                        style="position: absolute; display: none; background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 1px solid rgb(73, 186, 142); padding: 10px; width: 85%; max-height: 190px; overflow-y: auto;">
+                                                        <ul id="uRgnLst_top"></ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <ul>
+                                    <li class="login ">
+                                        <a data-nav-menu="Profile" data-group="top-nav" id="preSignIn"
+                                            style="display: inline-block;" class="signin" data-modal="signinPopup"
+                                            href="javascript:;">Sign In</a>
+                                        <a data-nav-menu="Profile" data-group="top-nav" id="postSignIn"
+                                            href="javascript:;" onclick="BMS.Header.fnHeaderDD(this, 'toggle');"
+                                            style="display: none;" class="user-img">
+                                            <!-- <img id="loggedInImg" class="logged-img"
+                                                src="//in.bmscdn.com/webin/movies/superstar/profile_avatar.png"
+                                                onerror="this.src='/\/in.bmscdn.com/webin/movies/superstar/profile_avatar.png'"
+                                                alt="User image"> -->
+                                            <div id="profile-badge-signin" class="loyalty-notif" style="display: none;">
+                                            </div>
+                                            <div id="profile-notification-badge" class="loyalty-notif" style=""></div>
+                                            <span class="profile-name">Hi, <span id="profileNameId">Guest</span></span>
+                                        </a>
+                                        <a data-nav-menu="Profile" data-group="top-nav" id="preLogin"
+                                            href="javascript:;" onclick="BMS.Header.fnHeaderDD(this, 'toggle');"
+                                            style="display: inline-block;" class="h-menu presignin">
+                                            <span class="__icon">
+                                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                    viewBox="0 0 20 20" enable-background="new 0 0 100 100"
+                                                    xml:space="preserve">
+                                                    <use xlink:href="/icons/common-icons.svg#icon-d-hamburger"></use>
+                                                </svg>
+                                            </span>
+                                        </a>
+                                        <div class="signed-in nav-tip" id="myProfile" data-role="dHeaderDD"
+                                            data-id="preLogin">
+                                            <div class="profile-sidebar-wrapper">
+                                                <div class="profile-container">
+                                                    <div class="profile-guest" style="display: flex ">
+                                                        <div class="profile-heading">Hey!</div>
+                                                        <div class="profile-login-container">
+                                                            <img src="https://in.bmscdn.com/webin/movies/superstar/rewards_login.png"
+                                                                class="profile-login-image-container">
+                                                            <div class="profile-login-text">
+                                                                Unlock special offers &amp; great benefits
+                                                            </div>
+                                                            <div class="profile-login-button" data-nav-menu="Profile"
+                                                                data-group="top-nav" data-modal="signinPopup"
+                                                                id="withoutLogIn">
+                                                                Login / Register
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="profile-user" style="display: none ">
+                                                        <div class="profile-details-wrapper">
+                                                            <div class="profile-details-container">
+                                                                <div class="profile-heading">
+                                                                    <div class="profile-user-text">
+                                                                        Hi <span class="profile-user-name"
+                                                                            id="profileNameId">Guest</span>!
+                                                                    </div>
+                                                                    <div class="profile-badge">
+                                                                        <svg version="1.1"
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                                            viewBox="0 0 24 24">
+                                                                            <defs>
+                                                                                <path id="a"
+                                                                                    d="M12 18l-5.26 2.765a1 1 0 0 1-1.45-1.054l1.004-5.857-4.256-4.148A1 1 0 0 1 2.592 8l5.881-.854 2.63-5.329a1 1 0 0 1 1.794 0l2.63 5.329 5.88.854a1 1 0 0 1 .555 1.706l-4.256 4.148 1.005 5.857a1 1 0 0 1-1.451 1.054L12 18z">
+                                                                                </path>
+                                                                                <linearGradient id="c" x1="48.43%"
+                                                                                    x2="48.43%" y1="20.568%"
+                                                                                    y2="103.416%">
+                                                                                    <stop offset="0%"
+                                                                                        stop-color="#FF9BAE"></stop>
+                                                                                    <stop offset="100%"
+                                                                                        stop-color="#FF6276"
+                                                                                        stop-opacity=".103"></stop>
+                                                                                </linearGradient>
+                                                                                <filter id="d" width="148.9%"
+                                                                                    height="130.6%" x="-24.5%"
+                                                                                    y="-15.3%"
+                                                                                    filterUnits="objectBoundingBox">
+                                                                                    <feGaussianBlur in="SourceGraphic"
+                                                                                        stdDeviation="1">
+                                                                                    </feGaussianBlur>
+                                                                                </filter>
+                                                                                <filter id="e" width="148.9%"
+                                                                                    height="130.6%" x="-24.5%"
+                                                                                    y="-15.3%"
+                                                                                    filterUnits="objectBoundingBox">
+                                                                                    <feGaussianBlur in="SourceGraphic"
+                                                                                        stdDeviation="1">
+                                                                                    </feGaussianBlur>
+                                                                                </filter>
+                                                                                <filter id="f" width="148.9%"
+                                                                                    height="130.6%" x="-24.5%"
+                                                                                    y="-15.3%"
+                                                                                    filterUnits="objectBoundingBox">
+                                                                                    <feGaussianBlur in="SourceGraphic"
+                                                                                        stdDeviation="1">
+                                                                                    </feGaussianBlur>
+                                                                                </filter>
+                                                                                <linearGradient id="g" x1="48.43%"
+                                                                                    x2="48.43%" y1="20.568%"
+                                                                                    y2="103.416%">
+                                                                                    <stop offset="0%"
+                                                                                        stop-color="#FFBB9B"></stop>
+                                                                                    <stop offset="100%"
+                                                                                        stop-color="#FF6276"
+                                                                                        stop-opacity=".103"></stop>
+                                                                                </linearGradient>
+                                                                            </defs>
+                                                                            <g fill="none" fill-rule="evenodd"
+                                                                                transform="translate(0 1)">
+                                                                                <mask id="b" fill="#fff">
+                                                                                    <use xlink:href="#a"></use>
+                                                                                </mask>
+                                                                                <use fill="#E7364D" xlink:href="#a">
+                                                                                </use>
+                                                                                <path fill="#222539"
+                                                                                    d="M12 17.75l5.26 2.765a1 1 0 0 0 1.457-.756l-.006-.048a1 1 0 0 1-1.451 1.054L12 18l-5.26 2.765a1 1 0 0 1-1.457-1.01 1.001 1.001 0 0 0 1.457.76L12 17.75zM1.744 8.867a.996.996 0 0 0 .294.59l4.256 4.147-.038.214-4.218-4.112a.998.998 0 0 1-.3-.762zm20.51.267a1 1 0 0 1-.292.572l-4.219 4.112-.037-.214 4.256-4.148a1 1 0 0 0 .293-.585.932.932 0 0 1-.002.263z"
+                                                                                    mask="url(#b)"
+                                                                                    style="mix-blend-mode:overlay">
+                                                                                </path>
+                                                                                <path fill="#222539"
+                                                                                    d="M12 17.75l5.26 2.765a1 1 0 0 0 1.457-.756l-.006-.048a1 1 0 0 1-1.451 1.054L12 18l-5.26 2.765a1 1 0 0 1-1.457-1.01 1.001 1.001 0 0 0 1.457.76L12 17.75zM1.744 8.867a.996.996 0 0 0 .294.59l4.256 4.147-.038.214-4.218-4.112a.998.998 0 0 1-.3-.762zm20.51.267a1 1 0 0 1-.292.572l-4.219 4.112-.037-.214 4.256-4.148a1 1 0 0 0 .293-.585.932.932 0 0 1-.002.263z"
+                                                                                    mask="url(#b)"
+                                                                                    style="mix-blend-mode:overlay">
+                                                                                </path>
+                                                                                <path fill="#222539"
+                                                                                    d="M12 17.75l5.26 2.765a1 1 0 0 0 1.457-.756l-.006-.048a1 1 0 0 1-1.451 1.054L12 18l-5.26 2.765a1 1 0 0 1-1.457-1.01 1.001 1.001 0 0 0 1.457.76L12 17.75zM1.744 8.867a.996.996 0 0 0 .294.59l4.256 4.147-.038.214-4.218-4.112a.998.998 0 0 1-.3-.762zm20.51.267a1 1 0 0 1-.292.572l-4.219 4.112-.037-.214 4.256-4.148a1 1 0 0 0 .293-.585.932.932 0 0 1-.002.263z"
+                                                                                    mask="url(#b)"
+                                                                                    style="mix-blend-mode:overlay">
+                                                                                </path>
+                                                                                <path fill="#222539"
+                                                                                    d="M12 17.75l5.26 2.765a1 1 0 0 0 1.457-.756l-.006-.048a1 1 0 0 1-1.451 1.054L12 18l-5.26 2.765a1 1 0 0 1-1.457-1.01 1.001 1.001 0 0 0 1.457.76L12 17.75zM1.744 8.867a.996.996 0 0 0 .294.59l4.256 4.147-.038.214-4.218-4.112a.998.998 0 0 1-.3-.762zm20.51.267a1 1 0 0 1-.292.572l-4.219 4.112-.037-.214 4.256-4.148a1 1 0 0 0 .293-.585.932.932 0 0 1-.002.263z"
+                                                                                    mask="url(#b)"
+                                                                                    style="mix-blend-mode:overlay">
+                                                                                </path>
+                                                                                <path fill="url(#c)"
+                                                                                    d="M12.443 1.363a1 1 0 0 1 .454.454l2.63 5.329 5.88.854a1 1 0 0 1 .555 1.706l-4.256 4.148 1.005 5.857a1 1 0 0 1-1.451 1.054l-1.867-.981A14.472 14.472 0 0 1 10 8.5c0-2.636.703-5.108 1.933-7.237.17-.013.345.019.51.1z"
+                                                                                    filter="url(#d)" mask="url(#b)"
+                                                                                    style="mix-blend-mode:overlay">
+                                                                                </path>
+                                                                                <path fill="url(#c)"
+                                                                                    d="M12.443 1.363a1 1 0 0 1 .454.454l2.63 5.329 5.88.854a1 1 0 0 1 .555 1.706l-4.256 4.148 1.005 5.857a1 1 0 0 1-1.451 1.054l-1.867-.981A14.472 14.472 0 0 1 10 8.5c0-2.636.703-5.108 1.933-7.237.17-.013.345.019.51.1z"
+                                                                                    filter="url(#e)" mask="url(#b)"
+                                                                                    style="mix-blend-mode:overlay">
+                                                                                </path>
+                                                                                <path fill="url(#c)"
+                                                                                    d="M12.443 1.363a1 1 0 0 1 .454.454l2.63 5.329 5.88.854a1 1 0 0 1 .555 1.706l-4.256 4.148 1.005 5.857a1 1 0 0 1-1.451 1.054l-1.867-.981A14.472 14.472 0 0 1 10 8.5c0-2.636.703-5.108 1.933-7.237.17-.013.345.019.51.1z"
+                                                                                    filter="url(#f)" mask="url(#b)"
+                                                                                    style="mix-blend-mode:overlay">
+                                                                                </path>
+                                                                                <path fill="url(#g)"
+                                                                                    d="M12.443 1.363a1 1 0 0 1 .454.454l2.63 5.329 5.88.854a1 1 0 0 1 .555 1.706l-4.256 4.148 1.005 5.857a1 1 0 0 1-1.451 1.054l-1.867-.981A14.472 14.472 0 0 1 10 8.5c0-2.636.703-5.108 1.933-7.237.17-.013.345.019.51.1z"
+                                                                                    mask="url(#b)" opacity=".6"></path>
+                                                                                <path fill="#FFF"
+                                                                                    d="M17.743 14.067l.968 5.644a1 1 0 0 1 .006.297l-.006-.047-1.005-5.857.037-.037zm-11.487 0l.038.037-1.005 5.857a1 1 0 0 0-.007.045 1.006 1.006 0 0 1 .007-.295l.967-5.644zm6.187-12.704a1 1 0 0 1 .454.454l2.63 5.329 5.88.854a1 1 0 0 1 .848 1.12.997.997 0 0 0-.847-.87l-5.881-.854-2.63-5.329a1 1 0 0 0-1.794 0l-2.63 5.329-5.88.854a1 1 0 0 0-.849.866A.999.999 0 0 1 2.592 8l5.881-.854 2.63-5.329a1 1 0 0 1 1.34-.454z"
+                                                                                    mask="url(#b)"
+                                                                                    style="mix-blend-mode:overlay">
+                                                                                </path>
+                                                                            </g>
+                                                                        </svg>
+                                                                    </div>
+                                                                </div>
+                                                                <a class="profile-edit-container"
+                                                                    href="/myprofile/settings/">
+                                                                    <div class="profile-edit-text">
+                                                                        Edit Profile
+                                                                    </div>
+                                                                    <div class="profile-edit-chevron">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                                            viewBox="0 0 24 24">
+                                                                            <path fill="#666" fill-rule="evenodd"
+                                                                                d="M10.467 6l-.934 1.069L14.546 12l-5.013 4.953.934 1.047 6-6z">
+                                                                            </path>
+                                                                        </svg>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                            <div class="profile-image-container">
+                                                                <!-- <img id="loggedInImgProfile" class="logged-img"
+                                                                    src="//in.bmscdn.com/webin/movies/superstar/profile_avatar.png"
+                                                                    onerror="this.src='/\/in.bmscdn.com/webin/movies/superstar/profile_avatar.png'"
+                                                                    alt="User image"> -->
+                                                            </div>
+                                                        </div>
+                                                        <div class="profile-progress-wrapper">
+                                                            <div class="profile-progress-container">
+                                                                <div class="profile-progress-bar">
+
+                                                                </div>
+                                                                <div class="profile-progress-information">
+                                                                </div>
+                                                            </div>
+                                                            <div class="profile-superstar-container">
+                                                                <div class="profile-superstar-header"></div>
+                                                                <div class="profile-superstar-body"></div>
+                                                            </div>
+                                                            <div class="profile-extra-info">
+                                                                <div class="profile-extra-text">
+                                                                    Rewards &amp; benefits await. Know more
+                                                                </div>
+                                                                <div class="profile-extra-chevron">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                                        viewBox="0 0 24 24">
+                                                                        <path fill="#666" fill-rule="evenodd"
+                                                                            d="M10.467 6l-.934 1.069L14.546 12l-5.013 4.953.934 1.047 6-6z">
+                                                                        </path>
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="sidebar-menu-items" class="body">
+                                                <ul>
+                                                    <li id="listVerifiedMobile" style="display:none;">
+                                                        <a class="list-element" href="javascript:;"
+                                                            onclick="BMS.SignIn.fnVerifyMobileNumber();">
+                                                            <div class="starting-block">
+                                                                <div class="svg-container">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                                        viewBox="0 0 24 24">
+                                                                        <path fill="#666" fill-rule="evenodd"
+                                                                            d="M14 2a1 1 0 0 1 1 1v1h-1V3H4v18h10v-6h1v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h10zM8 20h2v-1H8v1zm5.995-3v1H4v-1h9.995zM20 5a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-8l-3 2V6a1 1 0 0 1 1-1h10zm0 1H10v8.131L11.697 13H20V6zm-5 5v1h-4v-1h4zm4-2v1h-8V9h8zm0-2v1h-8V7h8z">
+                                                                        </path>
+                                                                    </svg>
+                                                                </div>
+                                                                <div class="list-text">
+                                                                    Verify Your Mobile Number
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li class="notification-alert" id="memberNotification" isclose="1">
+                                                        <a class="list-element notification-strip" data-group="top-nav"
+                                                            href="javascript:;" id="dNotifDD"
+                                                            onclick="$('[data-id=dNotifDD]').show();">
+                                                            <div class="starting-block">
+                                                                <div class="svg-container">
+                                                                    <svg version="1.1"
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        viewBox="0 0 24 24">
+                                                                        <use
+                                                                            xlink:href="/icons/common-icons.svg#icon-notification_profile">
+                                                                        </use>
+                                                                    </svg>
+                                                                </div>
+                                                                <div class="list-text">
+                                                                    Notifications
+                                                                </div>
+                                                            </div>
+                                                            <div class="ending-block">
+                                                                <div id="notification-count"
+                                                                    class="list-notification-count __alerts-bubble"
+                                                                    style="display: block;">1</div>
+                                                                <div class="svg-container chevron">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                                        viewBox="0 0 24 24">
+                                                                        <path fill="#666" fill-rule="evenodd"
+                                                                            d="M10.467 6l-.934 1.069L14.546 12l-5.013 4.953.934 1.047 6-6z">
+                                                                        </path>
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                        <div class="notification-dropdown-wrapper" data-role="dHeaderDD"
+                                                            data-id="dNotifDD"
+                                                            style="height: calc(100% - 0px); top: 0px;">
+                                                            <div class="notification-dropdown nav-tip" id="notification"
+                                                                style="display:block;">
+                                                                <div class="notification-head"><span><a
+                                                                            href="javascript:;"
+                                                                            onclick="$('[data-id=dNotifDD]').hide();"><span
+                                                                                class="head-notification">Back</span></a></span><span
+                                                                        class="clearall"><a href="javascript:;"
+                                                                            onclick="BMS.Notifications.clearAll();"><span
+                                                                                class="">Clear all</span></a></span>
+                                                                </div>
+                                                                <div class="notification-dropdown nav-tip notification-body"
+                                                                    style="height: calc(100vh - 62px - 0px);">
+                                                                    <div class="notification-card event-ticket _unread cursorhandPTA"
+                                                                        notifid="5d974e2a7d2636467a0e5a65-A"
+                                                                        danalydata="5d974e2a7d2636467a0e5a65,BN_CTA,4thOct_M_MTW_weekend"
+                                                                        onclick="BMS.Notifications.notifCountDecreaser(this,event);"
+                                                                        id="5d974e2a7d2636467a0e5a65_A"
+                                                                        data-viewed="false">
+                                                                        <div class="card-wrapper event-crd">
+                                                                            <div class="card-img"><img src=""
+                                                                                    data-src="https://in.bmscdn.com/mailers/images/190901promotion/trending_inbox_sep_w4.jpg">
+                                                                            </div>
+                                                                            <div class="card-content"><span
+                                                                                    class="durtion">2d ago</span><span
+                                                                                    id="5d974e2a7d2636467a0e5a65-s"
+                                                                                    class="__dismiss"
+                                                                                    onclick="return BMS.Notifications.softDelete(this,event);"><svg
+                                                                                        version="1.1"
+                                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                                        xmlns:=""
+                                                                                        xlink="http://www.w3.org/1999/xlink"
+                                                                                        x="0px" y="0px"
+                                                                                        viewBox="0 0 100 100"
+                                                                                        enable-background="new 0 0 100 100"
+                                                                                        xml:space="preserve">
+                                                                                        <use xlink:=""
+                                                                                            href="/icons/common-icons.svg#icon-cancel">
+                                                                                        </use>
+                                                                                    </svg></span>
+                                                                                <h4>The box office is loaded!</h4>
+                                                                                <p>This weekend, pick from a packed list
+                                                                                    of exciting movie.</p>
+                                                                                <div class="button-section">
+                                                                                    <div class="book-btn"><a
+                                                                                            id="5d974e2a7d2636467a0e5a65"
+                                                                                            href="https://in.bookmyshow.com/movies/?utm_source=inbox&amp;utm_medium=WEB&amp;utm_campaign=4thOct_M_MTW_weekend&amp;utm_term=announcement&amp;utm_content=The%20box%20office%20is%20loaded!"
+                                                                                            target="_blank">BOOK NOW</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <a class="list-element locked" href="/myprofile/quikpay"
+                                                            user-login-locked="true">
+                                                            <div class="starting-block">
+                                                                <div class="svg-container">
+                                                                    <svg version="1.1"
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        viewBox="0 0 24 24">
+                                                                        <use
+                                                                            xlink:href="/icons/common-icons.svg#icon-quikpay">
+                                                                        </use>
+                                                                    </svg>
+                                                                </div>
+                                                                <div class="list-text">
+                                                                    QuikPay
+                                                                </div>
+                                                            </div>
+                                                            <div class="ending-block">
+                                                                <div class="svg-container">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                                        viewBox="0 0 24 24">
+                                                                        <path fill="#666" fill-rule="evenodd"
+                                                                            d="M12 2a4 4 0 0 1 4 4v2h1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2h1V6a4 4 0 0 1 4-4zm5 7H7a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V10a1 1 0 0 0-1-1zm-5 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm0-11a3 3 0 0 0-3 3v2h6V6a3 3 0 0 0-3-3z">
+                                                                        </path>
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="list-element locked" href="/myprofile/booking-history"
+                                                            user-login-locked="true">
+                                                            <div class="starting-block">
+                                                                <div class="svg-container">
+                                                                    <svg version="1.1"
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        viewBox="0 0 24 24">
+                                                                        <use
+                                                                            xlink:href="/icons/common-icons.svg#icon-purchase_history">
+                                                                        </use>
+                                                                    </svg>
+                                                                </div>
+                                                                <div class="list-text">
+                                                                    Purchase History
+                                                                </div>
+                                                            </div>
+                                                            <div class="ending-block">
+                                                                <div class="svg-container">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                                        viewBox="0 0 24 24">
+                                                                        <path fill="#666" fill-rule="evenodd"
+                                                                            d="M12 2a4 4 0 0 1 4 4v2h1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2h1V6a4 4 0 0 1 4-4zm5 7H7a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V10a1 1 0 0 0-1-1zm-5 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm0-11a3 3 0 0 0-3 3v2h6V6a3 3 0 0 0-3-3z">
+                                                                        </path>
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="list-element locked"
+                                                            href="/myprofile/rewards/discover" user-login-locked="true">
+                                                            <div class="starting-block">
+                                                                <div class="svg-container">
+                                                                    <svg version="1.1"
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        viewBox="0 0 24 24">
+                                                                        <use
+                                                                            xlink:href="/icons/common-icons.svg#icon-rewards_profile">
+                                                                        </use>
+                                                                    </svg>
+                                                                </div>
+                                                                <div class="list-text">
+                                                                    Rewards
+                                                                </div>
+                                                            </div>
+                                                            <div class="ending-block">
+                                                                <div class="svg-container">
+                                                                    <svg version="1.1"
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        viewBox="0 0 24 24">
+                                                                        <use
+                                                                            xlink:href="/icons/common-icons.svg#icon-new_profile">
+                                                                        </use>
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="list-element" href="/donation">
+                                                            <div class="starting-block">
+                                                                <div class="svg-container">
+                                                                    <svg version="1.1"
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        viewBox="0 0 24 24">
+                                                                        <use
+                                                                            xlink:href="/icons/common-icons.svg#icon-book_a_smile">
+                                                                        </use>
+                                                                    </svg>
+                                                                </div>
+                                                                <div class="list-text">
+                                                                    BookASmile
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="list-element"
+                                                            href="https://support.bookmyshow.com/support/home?regionCode=BANG">
+                                                            <div class="starting-block">
+                                                                <div class="svg-container">
+                                                                    <svg version="1.1"
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        viewBox="0 0 24 24">
+                                                                        <use
+                                                                            xlink:href="/icons/common-icons.svg#icon-support">
+                                                                        </use>
+                                                                    </svg>
+                                                                </div>
+                                                                <div class="list-text">
+                                                                    Help &amp; Support
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="list-element locked" href="/myprofile/settings"
+                                                            user-login-locked="true">
+                                                            <div class="starting-block">
+                                                                <div class="svg-container">
+                                                                    <svg version="1.1"
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        viewBox="0 0 24 24">
+                                                                        <use
+                                                                            xlink:href="/icons/common-icons.svg#icon-settings_profile">
+                                                                        </use>
+                                                                    </svg>
+                                                                </div>
+                                                                <div class="list-text">
+                                                                    Settings
+                                                                </div>
+                                                            </div>
+                                                            <div class="ending-block">
+                                                                <div class="svg-container">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                                        viewBox="0 0 24 24">
+                                                                        <path fill="#666" fill-rule="evenodd"
+                                                                            d="M12 2a4 4 0 0 1 4 4v2h1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2h1V6a4 4 0 0 1 4-4zm5 7H7a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V10a1 1 0 0 0-1-1zm-5 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm0-11a3 3 0 0 0-3 3v2h6V6a3 3 0 0 0-3-3z">
+                                                                        </path>
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                <div class="sign-out-btn" id="signOut" style="display: none;">
+                                                    <a href="javascript:BMS.SignIn.fnLogOut();">
+                                                        Sign Out
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- End of Secondary nav -->
+        </header>
+    </div>
+</body>
+
+</html>
